@@ -170,143 +170,391 @@
  </head>
  <body class="h-full bg-white text-gray-900">
   <div id="app" class="w-full h-full overflow-auto"><!-- Header -->
-   <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+   <header class="fixed top-0 left-0 right-0 bg-white z-50 border-b border-gray-100 transition-all duration-300" id="header">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"><!-- Logo -->
      <div class="flex items-center gap-3"><img src="https://imgur.com/6bsibIg.png" alt="Mare Logo" class="w-12 h-12 float" loading="lazy" onerror="console.error('Image failed to load:', this.src); this.style.background='#0066CC'; this.alt='Mare Logo unavailable';">
-     </div>
+     </div><!-- Navigation Menu -->
+     <nav class="hidden md:flex items-center gap-8"><a href="#servicos" class="text-gray-700 hover:text-blue-600 font-medium transition-colors scroll-smooth">Serviços</a> <a href="#resultados" class="text-gray-700 hover:text-blue-600 font-medium transition-colors scroll-smooth">Resultados</a> <a href="#sobre" class="text-gray-700 hover:text-blue-600 font-medium transition-colors scroll-smooth">Sobre</a> <a href="#contato" class="text-gray-700 hover:text-blue-600 font-medium transition-colors scroll-smooth">Contato</a>
+     </nav><!-- CTA Button --> <a href="https://wa.me/5511954432023?text=Ol%C3%A1%20Mare!%20Gostaria%20de%20saber%20mais%20sobre%20como%20voc%C3%AAs%20podem%20transformar%20minhas%20redes%20sociais%20em%20vendas.%20Posso%20agendar%20uma%20consultoria%3F" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold text-sm rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105" onclick="window.gtag('event', 'conversion', {'send_to': 'AW-18071021180/XZcTCImUk5gcEPzM96hD', 'value': 1.0, 'currency': 'BRL', 'transaction_id': ''});">
+      <svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+      </svg> Agendar </a> <!-- Mobile Menu Button --> <button class="md:hidden w-10 h-10 flex items-center justify-center hover:bg-gray-100 rounded-lg transition-colors" id="mobile-menu-btn">
+      <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg></button>
+    </div><!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white">
+     <nav class="flex flex-col gap-0 px-6 py-4"><a href="#servicos" class="py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100 scroll-smooth">Serviços</a> <a href="#resultados" class="py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100 scroll-smooth">Resultados</a> <a href="#sobre" class="py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100 scroll-smooth">Sobre</a> <a href="#contato" class="py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100 scroll-smooth">Contato</a> <a href="https://wa.me/5511954432023?text=Ol%C3%A1%20Mare!%20Gostaria%20de%20saber%20mais%20sobre%20como%20voc%C3%AAs%20podem%20transformar%20minhas%20redes%20sociais%20em%20vendas.%20Posso%20agendar%20uma%20consultoria%3F" target="_blank" rel="noopener noreferrer" class="mt-4 w-full py-2.5 px-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg text-center hover:from-blue-600 hover:to-cyan-600 transition-all" onclick="gtag('event', 'conversion', {'send_to': 'AW-18071021180/XZcTCImUk5gcEPzM96hD', 'value': 1.0, 'currency': 'BRL', 'transaction_id': ''});">Agendar Consultoria</a>
+     </nav>
     </div>
    </header><!-- Hero Section -->
-   <section class="pt-32 pb-20 px-6 relative overflow-hidden" style="background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWM2NHR2bWQ5NHRsbjZxZjVhYzZneXVvMGo0MXIzcWY0cjJmbXF1YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zO9McZZQd4o4cKnREV/giphy.gif'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-    <div class="absolute inset-0 bg-gradient-to-b from-blue-50/30 via-white/40 to-white z-0"></div>
+   <section class="pt-32 pb-32 px-6 relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <!-- Animated background with GIF -->
+    <div class="absolute inset-0 overflow-hidden">
+     <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWM2NHR2bWQ5NHRsbjZxZjVhYzZneXVvMGo0MXIzcWY0cjJmbXF1YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zO9McZZQd4o4cKnREV/giphy.gif" alt="Background animation" class="w-full h-full object-cover opacity-30" loading="lazy"> <!-- Dark overlay for readability -->
+     <div class="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-blue-900/80 to-slate-900/80"></div><!-- Animated gradient orbs -->
+     <div class="absolute -top-40 -right-40 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+     <div class="absolute top-1/3 -left-40 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+     <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 4s;"></div>
+    </div>
     <div class="max-w-6xl mx-auto relative z-10">
-     <div class="max-w-3xl mx-auto text-center">
-      <div class="slide-up scale-in"><span class="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 text-sm font-medium rounded-full mb-6 shimmer">
-        <svg class="w-4 h-4" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
-        </svg> Especialistas em Social Media </span>
-      </div>
-      <h1 id="hero-title" class="slide-up delay-1 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">Transforme suas <span class="gradient-text">Redes Sociais</span> em uma Máquina de Vendas</h1>
-      <p id="hero-subtitle" class="slide-up delay-2 text-lg sm:text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">Gestão profissional de mídias sociais que atrai, engaja e converte seguidores em clientes fiéis. Resultados mensuráveis, estratégias comprovadas.</p>
-      <div class="slide-up delay-3 flex flex-col sm:flex-row gap-4 justify-center items-center"><a href="https://wa.me/5511954432023?text=Ol%C3%A1%20Mare!%20Gostaria%20de%20saber%20mais%20sobre%20como%20voc%C3%AAs%20podem%20transformar%20minhas%20redes%20sociais%20em%20vendas.%20Posso%20agendar%20uma%20consultoria%3F" target="_blank" rel="noopener noreferrer" class="btn-gradient pulse-subtle glow px-8 py-4 rounded-xl text-white font-semibold text-lg flex items-center gap-3 w-full sm:w-auto justify-center" onclick="gtag('event', 'conversion', {'send_to': 'AW-18071021180/XZcTCImUk5gcEPzM96hD', 'value': 1.0, 'currency': 'BRL', 'transaction_id': ''});">
-        <svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-        </svg><span id="cta-text">Quero Resultados Agora</span> </a>
-      </div>
-      <div class="slide-up delay-4 mt-12 flex items-center justify-center gap-8 text-sm text-gray-500">
-       <div class="flex items-center gap-2">
-        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-        </svg><span>+50 Clientes Ativos</span>
+     <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Left content -->
+      <div class="space-y-8">
+       <div class="slide-up scale-in">
+        <span class="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 border border-blue-400/50 text-blue-300 text-sm font-medium rounded-full mb-6 shimmer backdrop-blur-sm">
+         <svg class="w-4 h-4" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+         </svg> 🎯 Marketing com Resultados Comprovados </span>
        </div>
-       <div class="flex items-center gap-2">
-        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-        </svg><span>8+ Anos de Experiência</span>
+       <div class="slide-up delay-1">
+        <h1 id="hero-title" class="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight text-white">Transforme suas <span class="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">Redes Sociais</span> em Máquina de Vendas</h1>
+       </div>
+       <div class="slide-up delay-2">
+        <p id="hero-subtitle" class="text-lg sm:text-xl text-blue-100 leading-relaxed max-w-xl">Gestão profissional que transforma seguidores em clientes. Estratégias comprovadas, resultados mensuráveis e crescimento acelerado do seu faturamento.</p>
+       </div>
+       <div class="slide-up delay-3 pt-4 flex gap-4"><a href="#servicos" class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-bold text-lg rounded-xl transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/50 hover:scale-105 group scroll-smooth" onclick="window.gtag('event', 'conversion', {'send_to': 'AW-18071021180/XZcTCImUk5gcEPzM96hD', 'value': 1.0, 'currency': 'BRL', 'transaction_id': ''});">
+         <svg class="w-6 h-6 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+         </svg><span id="cta-text">Ver Serviços</span> </a> <a href="https://wa.me/5511954432023?text=Ol%C3%A1%20Mare!%20Gostaria%20de%20saber%20mais%20sobre%20como%20voc%C3%AAs%20podem%20transformar%20minhas%20redes%20sociais%20em%20vendas.%20Posso%20agendar%20uma%20consultoria%3F" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-8 py-4 bg-white/10 border-2 border-white hover:bg-white/20 text-white font-bold text-lg rounded-xl transition-all duration-300 hover:shadow-2xl hover:shadow-white/20 hover:scale-105 group backdrop-blur-sm" onclick="window.gtag('event', 'conversion', {'send_to': 'AW-18071021180/XZcTCImUk5gcEPzM96hD', 'value': 1.0, 'currency': 'BRL', 'transaction_id': ''});">
+         <svg class="w-6 h-6 group-hover:scale-110 transition-transform" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+         </svg>Agendar Consultoria </a>
+       </div><!-- Stats -->
+       <div class="slide-up delay-4 grid grid-cols-3 gap-4 pt-4">
+        <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-lg p-4 hover:bg-white/10 transition-all">
+         <div class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+          300%
+         </div>
+         <div class="text-xs text-blue-200 mt-1">
+          Mais Engajamento
+         </div>
+        </div>
+        <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-lg p-4 hover:bg-white/10 transition-all">
+         <div class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+          50+
+         </div>
+         <div class="text-xs text-blue-200 mt-1">
+          Clientes Ativos
+         </div>
+        </div>
+        <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-lg p-4 hover:bg-white/10 transition-all">
+         <div class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+          98%
+         </div>
+         <div class="text-xs text-blue-200 mt-1">
+          Satisfação
+         </div>
+        </div>
+       </div>
+      </div><!-- Right side - Visual element -->
+      <div class="hidden md:block relative">
+       <div class="relative w-full h-96">
+        <!-- Floating card 1 -->
+        <div class="absolute top-0 right-0 w-48 h-48 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-400/30 rounded-2xl p-6 backdrop-blur-md float delay-1 hover:shadow-2xl hover:shadow-blue-500/30 transition-all">
+         <div class="text-sm font-semibold text-blue-200 mb-2">
+          📊 Resultado
+         </div>
+         <div class="text-3xl font-bold text-white mb-2">
+          +250%
+         </div>
+         <div class="text-xs text-blue-100">
+          Crescimento de vendas em 90 dias
+         </div>
+        </div><!-- Floating card 2 -->
+        <div class="absolute bottom-0 left-0 w-48 h-40 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-2xl p-6 backdrop-blur-md float" style="animation-delay: 1s;">
+         <div class="text-sm font-semibold text-cyan-200 mb-2">
+          🚀 Estratégia
+         </div>
+         <div class="text-2xl font-bold text-white mb-1">
+          Comprovada
+         </div>
+         <div class="text-xs text-cyan-100">
+          Testada em +50 negócios
+         </div>
+        </div><!-- Center decorative element -->
+        <div class="absolute inset-0 flex items-center justify-center">
+         <div class="w-64 h-64 rounded-3xl border border-blue-400/20 overflow-hidden bg-cover bg-center" style="background-image: url('https://imgur.com/66Jxh4g.jpg');"></div>
+        </div>
        </div>
       </div>
      </div>
     </div>
    </section><!-- Services Section -->
-   <section class="py-20 px-6 bg-white">
-    <div class="max-w-6xl mx-auto">
-     <div class="text-center mb-16">
-      <h2 class="text-3xl sm:text-4xl font-bold mb-4">O que <span class="gradient-text">entregamos</span></h2>
-      <p class="text-gray-600 text-lg max-w-2xl mx-auto">Soluções completas para posicionar sua marca e gerar resultados reais nas redes sociais</p>
+   <section id="servicos" class="py-24 px-6 bg-gradient-to-b from-white via-slate-50 to-white relative overflow-hidden">
+    <!-- Decorative elements -->
+    <div class="absolute -top-40 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full filter blur-3xl"></div>
+    <div class="absolute -bottom-40 right-1/4 w-96 h-96 bg-cyan-500/5 rounded-full filter blur-3xl"></div>
+    <div class="max-w-6xl mx-auto relative z-10">
+     <div class="text-center mb-20">
+      <div class="inline-block mb-4 slide-up">
+       <span class="text-blue-600 font-bold text-sm uppercase tracking-widest">✨ NOSSOS SERVIÇOS</span>
+      </div>
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 text-gray-900 slide-up delay-1">O que <span class="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">entregamos</span></h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto slide-up delay-2">Soluções completas que transformam sua marca em uma máquina de gerar leads e vendas</p>
      </div>
-     <div class="grid md:grid-cols-3 gap-8"><!-- Card 1 -->
-      <div class="card-hover border-animate bg-white border border-gray-100 rounded-2xl p-8 shadow-sm slide-up delay-1">
-       <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6 rotate-in">
-        <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
-        </svg>
+     <div class="grid md:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div class="group slide-up delay-1">
+       <div class="relative h-full">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300 opacity-0 group-hover:opacity-100"></div>
+        <div class="relative bg-white border border-gray-200 group-hover:border-blue-400 rounded-2xl p-8 h-full transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+         <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+          </svg>
+         </div>
+         <h3 class="text-2xl font-bold text-gray-900 mb-4">Gestão Completa</h3>
+         <p class="text-gray-600 leading-relaxed mb-4">Criação de conteúdo viral, estratégia personalizada, agendamento inteligente e análise detalhada de resultados.</p>
+         <div class="flex items-center text-blue-600 font-semibold group-hover:translate-x-2 transition-transform">
+          Saiba mais →
+         </div>
+        </div>
        </div>
-       <h3 class="text-xl font-bold mb-3">Gestão Completa</h3>
-       <p class="text-gray-600 leading-relaxed">Criação de conteúdo, planejamento estratégico, agendamento e monitoramento diário das suas redes sociais.</p>
       </div><!-- Card 2 -->
-      <div class="card-hover border-animate bg-white border border-gray-100 rounded-2xl p-8 shadow-sm slide-up delay-2">
-       <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6 rotate-in delay-1">
-        <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-        </svg>
+      <div class="group slide-up delay-2">
+       <div class="relative h-full">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300 opacity-0 group-hover:opacity-100"></div>
+        <div class="relative bg-white border border-gray-200 group-hover:border-blue-400 rounded-2xl p-8 h-full transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+         <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>
+         </div>
+         <h3 class="text-2xl font-bold text-gray-900 mb-4">Tráfego Pago</h3>
+         <p class="text-gray-600 leading-relaxed mb-4">Campanhas otimizadas no Meta Ads e Google Ads com ROI comprovado. Atraímos clientes qualificados que realmente compram.</p>
+         <div class="flex items-center text-blue-600 font-semibold group-hover:translate-x-2 transition-transform">
+          Saiba mais →
+         </div>
+        </div>
        </div>
-       <h3 class="text-xl font-bold mb-3">Tráfego Pago</h3>
-       <p class="text-gray-600 leading-relaxed">Campanhas otimizadas no Meta Ads e Google Ads para atrair clientes qualificados e aumentar suas vendas.</p>
       </div><!-- Card 3 -->
-      <div class="card-hover border-animate bg-white border border-gray-100 rounded-2xl p-8 shadow-sm slide-up delay-3">
-       <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6 rotate-in delay-2">
-        <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-        </svg>
+      <div class="group slide-up delay-3">
+       <div class="relative h-full">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300 opacity-0 group-hover:opacity-100"></div>
+        <div class="relative bg-white border border-gray-200 group-hover:border-blue-400 rounded-2xl p-8 h-full transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+         <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+         </div>
+         <h3 class="text-2xl font-bold text-gray-900 mb-4">Design Profissional</h3>
+         <p class="text-gray-600 leading-relaxed mb-4">Artes exclusivas, identidade visual coerente e templates personalizados que destacam sua marca das concorrentes.</p>
+         <div class="flex items-center text-blue-600 font-semibold group-hover:translate-x-2 transition-transform">
+          Saiba mais →
+         </div>
+        </div>
        </div>
-       <h3 class="text-xl font-bold mb-3">Design Profissional</h3>
-       <p class="text-gray-600 leading-relaxed">Artes exclusivas e identidade visual consistente que destacam sua marca e geram reconhecimento.</p>
       </div>
      </div>
     </div>
    </section><!-- Social Proof Section -->
-   <section class="py-20 px-6 bg-gradient-to-b from-gray-50 to-white">
-    <div class="max-w-6xl mx-auto">
-     <div class="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden scale-in">
-      <div class="grid md:grid-cols-2">
-       <div class="p-10 lg:p-14 flex flex-col justify-center slide-right"><span class="text-blue-600 font-semibold text-sm uppercase tracking-wider mb-4">Por que a Mare?</span>
-        <h2 class="text-3xl sm:text-4xl font-bold mb-6">Resultados que <span class="gradient-text">falam por si</span></h2>
-        <p class="text-gray-600 text-lg mb-8 leading-relaxed">Não prometemos milagres. Entregamos estratégias testadas e validadas que já transformaram dezenas de negócios como o seu.</p>
-        <div class="grid grid-cols-2 gap-6 mb-8">
-         <div class="scale-in delay-1">
-          <div class="text-4xl font-extrabold text-blue-600 mb-1">
-           300%
-          </div>
-          <p class="text-gray-600 text-sm">Aumento médio de engajamento</p>
+   <section id="resultados" class="py-24 px-6 bg-white relative overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-50/50 to-transparent pointer-events-none"></div>
+    <div class="max-w-6xl mx-auto relative z-10">
+     <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Left Content -->
+      <div class="space-y-8 slide-right">
+       <div>
+        <span class="inline-block text-blue-600 font-bold text-sm uppercase tracking-widest mb-4">📊 RESULTADOS REAIS</span>
+        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 mb-6">Números que <span class="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">comprovam</span> nosso trabalho</h2>
+        <p class="text-lg text-gray-600 leading-relaxed mb-8">Não fazemos promessas vazias. Cada número abaixo representa resultados reais de clientes como você.</p>
+       </div><!-- Stats Grid -->
+       <div class="grid grid-cols-2 gap-4">
+        <div class="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 rounded-xl p-8 hover:shadow-lg transition-all duration-300 min-h-[160px] flex flex-col justify-center">
+         <div class="text-3xl sm:text-4xl font-black bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-3">
+          300%
          </div>
-         <div class="scale-in delay-2">
-          <div class="text-4xl font-extrabold text-blue-600 mb-1">
-           +2M
-          </div>
-          <p class="text-gray-600 text-sm">Alcance mensal gerado</p>
+         <p class="text-gray-700 font-semibold text-sm sm:text-base leading-snug">Aumento de Engajamento</p>
+        </div>
+        <div class="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 rounded-xl p-8 hover:shadow-lg transition-all duration-300 min-h-[160px] flex flex-col justify-center">
+         <div class="text-3xl sm:text-4xl font-black bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-3">
+          +2M
          </div>
-         <div class="scale-in delay-3">
-          <div class="text-4xl font-extrabold text-blue-600 mb-1">
-           50+
-          </div>
-          <p class="text-gray-600 text-sm">Marcas transformadas</p>
+         <p class="text-gray-700 font-semibold text-sm sm:text-base leading-snug">Alcance Mensal</p>
+        </div>
+        <div class="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 rounded-xl p-8 hover:shadow-lg transition-all duration-300 min-h-[160px] flex flex-col justify-center">
+         <div class="text-3xl sm:text-4xl font-black bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-3">
+          50+
          </div>
-         <div class="scale-in delay-4">
-          <div class="text-4xl font-extrabold text-blue-600 mb-1">
-           98%
-          </div>
-          <p class="text-gray-600 text-sm">Taxa de satisfação</p>
+         <p class="text-gray-700 font-semibold text-sm sm:text-base leading-snug">Clientes Ativos</p>
+        </div>
+        <div class="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 rounded-xl p-8 hover:shadow-lg transition-all duration-300 min-h-[160px] flex flex-col justify-center">
+         <div class="text-3xl sm:text-4xl font-black bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-3">
+          98%
+         </div>
+         <p class="text-gray-700 font-semibold text-sm sm:text-base leading-snug">Satisfação</p>
+        </div>
+       </div><!-- Features --> <!-- Features -->
+       <div class="space-y-3 pt-4">
+        <div class="flex items-start gap-4 group">
+         <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+          <svg class="w-5 h-5 text-white" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+          </svg>
+         </div>
+         <div>
+          <p class="font-bold text-gray-900">Estratégia Personalizada</p>
+          <p class="text-gray-600 text-sm">Customizada para seu nicho e objetivos específicos</p>
          </div>
         </div>
-        <div class="space-y-3 slide-right">
-         <div class="flex items-start gap-3">
-          <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-          </svg><span class="text-gray-700 text-sm font-medium">Estratégia personalizada para seu nicho</span>
+        <div class="flex items-start gap-4 group">
+         <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+          <svg class="w-5 h-5 text-white" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+          </svg>
          </div>
-         <div class="flex items-start gap-3">
-          <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-          </svg><span class="text-gray-700 text-sm font-medium">Relatórios mensais detalhados e transparentes</span>
+         <div>
+          <p class="font-bold text-gray-900">Relatórios Transparentes</p>
+          <p class="text-gray-600 text-sm">Acompanhe cada métrica em tempo real com painéis detalhados</p>
          </div>
-         <div class="flex items-start gap-3">
-          <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-          </svg><span class="text-gray-700 text-sm font-medium">Suporte dedicado 24/7 e consultoria ativa</span>
+        </div>
+        <div class="flex items-start gap-4 group">
+         <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+          <svg class="w-5 h-5 text-white" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+          </svg>
+         </div>
+         <div>
+          <p class="font-bold text-gray-900">Suporte 24/7</p>
+          <p class="text-gray-600 text-sm">Time dedicado sempre pronto para ajudar seu crescimento</p>
          </div>
         </div>
        </div>
-       <div class="bg-gradient-to-br from-blue-600 to-blue-700 gradient-animate p-10 lg:p-14 flex flex-col justify-center text-white slide-left">
-        <svg class="w-12 h-12 text-blue-300 mb-6 opacity-50 float" fill="currentColor" viewbox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-        </svg>
-        <p class="text-xl lg:text-2xl font-medium leading-relaxed mb-6">"A Mare transformou completamente nossa presença digital. Em 3 meses, triplicamos nossos leads e dobramos o faturamento."</p>
-        <div>
-         <p class="font-bold">Marina Santos</p>
-         <p class="text-blue-200 text-sm">CEO, Studio Beauty</p>
+      </div><!-- Right Testimonial -->
+      <div class="slide-left">
+       <div class="relative">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-cyan-600/10 rounded-3xl blur-2xl"></div>
+        <div class="relative bg-white border-2 border-gray-100 rounded-3xl p-10 lg:p-12 hover:shadow-2xl transition-all duration-300">
+         <!-- Testimonial Mark -->
+         <svg class="w-14 h-14 text-blue-600/20 mb-6" fill="currentColor" viewbox="0 0 24 24"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-4.5-5-7-5m0 0c-3 0-7 1-7 8v8c0 1.25 4.5 5 7 5m0 0c3 0 7-1 7-8V5c0-1.25-4.5-5-7-5m0 0c-3 0-7 1-7 8v8c0 1.25 4.5 5 7 5" />
+         </svg>
+         <p class="text-lg font-semibold text-gray-900 mb-8 leading-relaxed">"Contratei a Mare e em apenas 90 dias triplicamos nossos leads. Passamos de 10 vendas/mês para 30. O time é incrivelmente profissional!"</p>
+         <div class="flex items-center gap-4">
+          <img src="https://imgur.com/9Q1sgH2.jpg" alt="Marina Santos" class="w-16 h-16 rounded-full object-cover" loading="lazy" onerror="console.error('Image failed to load:', this.src); this.style.background='linear-gradient(135deg, #0066CC 0%, #0099FF 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.innerHTML='MS'; this.style.color='white'; this.style.fontWeight='bold'; this.alt='Marina Santos unavailable';">
+          <div>
+           <p class="font-bold text-gray-900 text-lg">Marina Santos</p>
+           <p class="text-gray-600">CEO - Studio Beauty</p>
+           <div class="flex gap-1 mt-1">
+            <span class="text-yellow-400">★</span> <span class="text-yellow-400">★</span> <span class="text-yellow-400">★</span> <span class="text-yellow-400">★</span> <span class="text-yellow-400">★</span>
+           </div>
+          </div>
+         </div>
         </div>
        </div>
       </div>
      </div>
     </div>
-   </section><!-- CTA Final Section -->
-   <section class="py-20 px-6 bg-white">
-    <div class="max-w-4xl mx-auto text-center">
-     <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Pronto para <span class="gradient-text">escalar</span> seu negócio?</h2>
-     <p class="text-gray-600 text-lg mb-10 max-w-2xl mx-auto">Agende uma consultoria gratuita e descubra como podemos transformar suas redes sociais em um canal de vendas previsível.</p>
-     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10"><a href="https://wa.me/5511954432023?text=Ol%C3%A1%20Mare!%20Gostaria%20de%20agendar%20uma%20consultoria%20gratuita%20para%20descobrir%20como%20voc%C3%AAs%20podem%20transformar%20minhas%20redes%20sociais%20em%20um%20canal%20de%20vendas%20previs%C3%ADvel.%20Quando%20voc%C3%AA%20tem%20disponibilidade%3F" target="_blank" rel="noopener noreferrer" class="btn-gradient glow px-10 py-5 rounded-xl text-white font-semibold text-lg flex items-center gap-3 w-full sm:w-auto justify-center pulse-subtle scale-in" onclick="gtag('event', 'conversion', {'send_to': 'AW-18071021180/XZcTCImUk5gcEPzM96hD', 'value': 1.0, 'currency': 'BRL', 'transaction_id': ''});">
-       <svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-       </svg> Falar com Especialista </a>
+   </section><!-- About Section -->
+   <section id="sobre" class="py-24 px-6 bg-white relative overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-blue-50/50 to-transparent pointer-events-none"></div>
+    <div class="max-w-6xl mx-auto relative z-10">
+     <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Left Image -->
+      <div class="slide-left">
+       <div class="relative h-80 rounded-2xl overflow-hidden shadow-2xl">
+        <img src="https://imgur.com/C84xQtA.jpg" alt="Time Mare Agência" class="w-full h-full object-contain bg-gray-100" loading="lazy" onerror="console.error('Image failed to load:', this.src); this.style.background='linear-gradient(135deg, #0066CC 0%, #0099FF 100%)'; this.alt='Time Mare unavailable';">
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent"></div>
+       </div>
+      </div><!-- Right Content -->
+      <div class="space-y-8 slide-right">
+       <div>
+        <span class="inline-block text-blue-600 font-bold text-sm uppercase tracking-widest mb-4">👥 SOBRE NÓS</span>
+        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 mb-6">Quem é a <span class="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Mare Agência</span></h2>
+        <p class="text-lg text-gray-600 leading-relaxed mb-6">Somos especialistas em transformar marcas em potências de vendas digitais. Com mais de 5 anos de experiência, já gerenciamos +2M em alcance mensal e geramos resultados reais para empresas de todos os tamanhos.</p>
+        <p class="text-lg text-gray-600 leading-relaxed">Nossa metodologia propriedária combina análise de dados, criatividade e execução impecável para garantir que cada real investido em marketing gere retorno mensurável.</p>
+       </div><!-- Values -->
+       <div class="space-y-4">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">Nossos Valores</h3>
+        <div class="flex items-start gap-4">
+         <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden"><img src="https://imgur.com/VJPl51E.png" alt="Transparência Total" class="w-full h-full object-cover" loading="lazy" onerror="console.error('Image failed to load:', this.src); this.style.background='linear-gradient(135deg, #0066CC 0%, #0099FF 100%)'; this.alt='Transparência Total unavailable';">
+         </div>
+         <div>
+          <p class="font-bold text-gray-900 text-lg">Transparência Total</p>
+          <p class="text-gray-600">Você acompanha cada métrica e resultado em tempo real</p>
+         </div>
+        </div>
+        <div class="flex items-start gap-4">
+         <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-white" fill="currentColor" viewbox="0 0 20 20"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v1h8v-1zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+          </svg>
+         </div>
+         <div>
+          <p class="font-bold text-gray-900 text-lg">Foco no Cliente</p>
+          <p class="text-gray-600">Seu sucesso é nosso sucesso. Trabalhamos como parceiros</p>
+         </div>
+        </div>
+        <div class="flex items-start gap-4">
+         <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden"><img src="https://imgur.com/KTaGWj3.png" alt="Inovação Constante" class="w-full h-full object-cover" loading="lazy" onerror="console.error('Image failed to load:', this.src); this.style.background='linear-gradient(135deg, #0066CC 0%, #0099FF 100%)'; this.alt='Inovação Constante unavailable';">
+         </div>
+         <div>
+          <p class="font-bold text-gray-900 text-lg">Inovação Constante</p>
+          <p class="text-gray-600">Sempre atualizados com as últimas tendências de marketing</p>
+         </div>
+        </div>
+       </div>
+      </div>
      </div>
-     <p class="text-gray-400 text-sm">Resposta em até 2 horas • Sem compromisso</p>
+    </div>
+   </section><!-- Contact Section -->
+   <section id="contato" class="py-24 px-6 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute -top-40 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full filter blur-3xl"></div>
+    <div class="max-w-6xl mx-auto relative z-10">
+     <div class="text-center mb-16 slide-up">
+      <span class="inline-block text-blue-600 font-bold text-sm uppercase tracking-widest mb-4">📞 FALE CONOSCO</span>
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 mb-6">Vamos <span class="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">conversar</span>?</h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">Entre em contato conosco e descubra como podemos transformar sua estratégia de marketing em resultados reais.</p>
+     </div>
+     <div class="grid md:grid-cols-2 gap-8 items-center mb-12">
+      <!-- WhatsApp Card -->
+      <div class="group slide-up delay-1">
+       <div class="relative h-full">
+        <div class="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300 opacity-0 group-hover:opacity-100"></div>
+        <div class="relative bg-white border border-gray-200 group-hover:border-green-400 rounded-2xl p-8 h-full transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+         <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+          <svg class="w-8 h-8 text-white" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+         </div>
+         <h3 class="text-2xl font-bold text-gray-900 mb-4">WhatsApp</h3>
+         <p class="text-gray-600 leading-relaxed mb-6">Atendimento rápido e direto. Converse com nossos especialistas agora.</p><a href="https://wa.me/5511954432023" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-green-600 font-semibold group-hover:translate-x-2 transition-transform" onclick="window.gtag('event', 'conversion', {'send_to': 'AW-18071021180/XZcTCImUk5gcEPzM96hD', 'value': 1.0, 'currency': 'BRL', 'transaction_id': ''});"> Enviar mensagem → </a>
+        </div>
+       </div>
+      </div><!-- Lead Form -->
+      <div class="slide-up delay-2">
+       <div class="relative">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-cyan-600/10 rounded-2xl blur-2xl"></div>
+        <div class="relative bg-white border-2 border-gray-100 rounded-2xl p-8 lg:p-10 hover:shadow-2xl transition-all duration-300">
+         <h3 class="text-2xl font-bold text-gray-900 mb-2">Receba Nossa Estratégia</h3>
+         <p class="text-gray-600 text-sm mb-6">Preencha seus dados e receberá um diagnóstico personalizado por email</p>
+         <form id="lead-form" class="space-y-4" onsubmit="handleLeadSubmit(event)">
+          <div><label for="lead-name" class="block text-sm font-semibold text-gray-700 mb-2">Seu Nome</label> <input type="text" id="lead-name" name="name" placeholder="João Silva" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" required>
+          </div>
+          <div><label for="lead-email" class="block text-sm font-semibold text-gray-700 mb-2">Email</label> <input type="email" id="lead-email" name="email" placeholder="seu@email.com" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" required>
+          </div>
+          <div><label for="lead-phone" class="block text-sm font-semibold text-gray-700 mb-2">WhatsApp</label> <input type="tel" id="lead-phone" name="phone" placeholder="(11) 9 9999-9999" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" required>
+          </div><button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105" onclick="window.gtag('event', 'conversion', {'send_to': 'AW-18071021180/XZcTCImUk5gcEPzM96hD', 'value': 1.0, 'currency': 'BRL', 'transaction_id': ''});"> Enviar e Receber Diagnóstico </button>
+         </form>
+         <p class="text-xs text-gray-500 text-center mt-4">✓ Seus dados são seguros • ✓ Sem spam</p>
+        </div>
+       </div>
+      </div>
+     </div><!-- CTA -->
+     <div class="text-center slide-up delay-4 bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200 rounded-2xl p-12">
+      <h3 class="text-3xl font-bold text-gray-900 mb-4">Pronto para transformar seu negócio?</h3>
+      <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">Agende uma consultoria gratuita agora e descubra a estratégia perfeita para suas redes sociais.</p><a href="https://wa.me/5511954432023?text=Ol%C3%A1%20Mare!%20Gostaria%20de%20agendar%20uma%20consultoria%20gratuita%20para%20descobrir%20como%20voc%C3%AAs%20podem%20transformar%20minhas%20redes%20sociais%20em%20um%20canal%20de%20vendas%20previs%C3%ADvel.%20Quando%20voc%C3%AA%20tem%20disponibilidade%3F" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-bold rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105">
+       <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+       </svg>Agendar Consultoria Gratuita </a>
+     </div>
+    </div>
+   </section><!-- CTA Final Section -->
+   <section class="py-24 px-6 bg-gradient-to-b from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
+    <!-- Animated gradient orbs -->
+    <div class="absolute top-20 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+    <div class="absolute bottom-20 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+    <div class="max-w-6xl mx-auto relative z-10">
+     <div class="text-center mb-16 slide-up">
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6">Pronto para <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">escalar</span> seu negócio?</h2>
+      <p class="text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">Agende uma consultoria gratuita agora e descubra como transformar suas redes sociais em um canal de vendas previsível e escalável.</p>
+     </div>
+     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 slide-up delay-1">
+      <a href="https://wa.me/5511954432023?text=Ol%C3%A1%20Mare!%20Gostaria%20de%20agendar%20uma%20consultoria%20gratuita%20para%20descobrir%20como%20voc%C3%AAs%20podem%20transformar%20minhas%20redes%20sociais%20em%20um%20canal%20de%20vendas%20previs%C3%ADvel.%20Quando%20voc%C3%AA%20tem%20disponibilidade%3F" target="_blank" rel="noopener noreferrer" class="group relative inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-bold text-lg rounded-xl transition-all duration-300 shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/70 hover:scale-105 overflow-hidden" onclick="window.gtag('event', 'conversion', {'send_to': 'AW-18071021180/XZcTCImUk5gcEPzM96hD', 'value': 1.0, 'currency': 'BRL', 'transaction_id': ''});">
+       <div class="absolute inset-0 bg-white/20 translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+       <svg class="w-6 h-6 relative group-hover:scale-110 transition-transform" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+       </svg><span class="relative">Falar com Especialista</span> </a>
+     </div>
+     <p class="text-center text-blue-300 text-sm font-medium slide-up delay-2">✓ Resposta em até 2 horas • ✓ Sem compromisso • ✓ Consultoria 100% gratuita</p>
     </div>
    </section><!-- Floating WhatsApp Button --> <a href="https://wa.me/5511954432023" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-40 glow" style="box-shadow: 0 4px 20px rgba(34, 197, 94, 0.4);" onclick="gtag('event', 'conversion', {'send_to': 'AW-18071021180/XZcTCImUk5gcEPzM96hD', 'value': 1.0, 'currency': 'BRL', 'transaction_id': ''});">
     <svg class="w-7 h-7" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
@@ -320,6 +568,83 @@
    </footer>
   </div>
   <script>
+    // Handle Lead Form Submission
+    function handleLeadSubmit(event) {
+      event.preventDefault();
+      
+      const form = document.getElementById('lead-form');
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const formData = {
+        name: document.getElementById('lead-name').value,
+        email: document.getElementById('lead-email').value,
+        phone: document.getElementById('lead-phone').value
+      };
+
+      // Visual feedback
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = '⏳ Enviando...';
+      submitBtn.disabled = true;
+
+      // Create message for WhatsApp
+      const message = `🎯 *NOVO LEAD RECEBIDO*\n\n` +
+        `*Nome:* ${formData.name}\n` +
+        `*Email:* ${formData.email}\n` +
+        `*WhatsApp:* ${formData.phone}\n\n` +
+        `_Enviado via formulário da Mare Agência_`;
+
+      // Encode message for WhatsApp URL
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappNumber = '5511954432023'; // Número cadastrado
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+      // Open WhatsApp in new tab
+      window.open(whatsappURL, '_blank');
+
+      // Update UI after sending
+      submitBtn.textContent = '✓ Redirecionando para WhatsApp...';
+      submitBtn.classList.add('bg-green-600');
+
+      // Reset after 2 seconds
+      setTimeout(() => {
+        form.reset();
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('bg-green-600');
+      }, 2000);
+    }
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      
+      // Close menu when clicking on a link
+      const mobileLinks = mobileMenu.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
     // Google Analytics Conversion Tracking
     window.gtag = window.gtag || function() {
       (window.dataLayer = window.dataLayer || []).push(arguments);
@@ -418,5 +743,5 @@
       });
     }
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e94b44ad3924568',t:'MTc3NTY4NzI5Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ed2842e2376f1de',t:'MTc3NjMzNTQ0NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
